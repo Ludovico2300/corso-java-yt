@@ -1,39 +1,41 @@
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        // ciclo for
-        for (int i = 0; i < 10; i++) {
-            System.out.println("for " + i);
+        // array, crearne uno, associare elementi, metodo to string, lunghezza,
+        // modificare e mostrare elementi
+
+        // array
+        int[] numbers = new int[3];
+        int[] numbers2 = new int[] { 10, 20, 30 };
+
+        // associare elementi
+        numbers[0] = 1;
+        numbers[1] = 2;
+        numbers[2] = 3;
+
+        // metodo to string
+        System.out.println(numbers);
+        System.out.println(Arrays.toString(numbers));
+
+        // lunghezza
+        System.out.println(numbers.length);
+
+        // modificare e mostrare elementi
+        numbers[0] = 2;
+        System.out.println(numbers[0]);
+
+        // array e ciclo for
+        for (int i = 0; i < numbers2.length; i++) {
+            System.out.println("ciclo for " + numbers2[i]);
         }
 
-        // for annidati
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 10; j++) {
-                System.out.println("for annidato " + i + " " + j);
-            }
+        // array e ciclo for-each
+        for (int number : numbers2) {
+            System.out.println("ciclo for each " + number);
         }
-
-        // for enhanced --> sarebbe il for each
-        int[] array = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        for (int i : array) {
-            System.out.println("for enhanced " + i);
-        }
-
-        // break and continue
-        for (int i = 0; i < 10; i++) {
-            if (i == 5) {
-                break;
-            }
-            System.out.println("for break " + i);
-        }
-        for (int i = 0; i < 10; i++) {
-            if (i == 5) {
-                continue;
-            }
-            System.out.println("for continue " + i);
-        }
-
     }
 }
