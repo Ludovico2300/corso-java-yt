@@ -3,23 +3,56 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // operatori logici
-        // && (and)
-        // || (or)
-        // ! (not)
+        // condizioni if (if, else, else if, if annidati, ternary operator)
 
-        int a = 10;
-        int b = 20;
-        int c = 30;
+        // IF
+        // if (condizione) {
+        // codice da eseguire se la condizione è vera
+        // }
 
-        boolean result = a > b && b < c;
-        System.out.println(result); // output: false
+        boolean isOnline = true;
+        if (isOnline) {
+            System.out.println("è online");
+        }
 
-        boolean result2 = a > b || b < c;
-        System.out.println(result2); // output: true
+        // IF ELSE
+        // if (condizione) {
+        // codice da eseguire se la condizione è vera
+        //
+        // } else {
+        // codice da eseguire se la condizione è falsa
+        // }
 
-        boolean result3 = !result;
-        System.out.println(result3); // output: true
+        if (isOnline) {
+            System.out.println("è online");
+
+        } else {
+            System.out.println("non è online");
+        }
+
+        // IF ELSE IF
+        // if (condizione) {
+        // codice da eseguire se la condizione è vera
+        //
+        //
+        // } else if (condizione) {
+        // codice da eseguire se la condizione è falsa
+        // }
+
+        int age = 18;
+        if (age >= 18) {
+            System.out.println("può votare");
+        } else if (age >= 16) {
+            System.out.println("può votare in seconda");
+        }
+
+        // TERNARY OPERATOR
+        // (condizione) ? codice da eseguire se la condizione è vera : codice da
+        // eseguire se la condizione è falsa
+        int x = 10;
+        int y = 20;
+        int max = (x > y) ? x : y;
+        System.out.println(max);
 
     }
 }
