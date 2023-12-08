@@ -3,56 +3,37 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // condizioni if (if, else, else if, if annidati, ternary operator)
+        // switch
+        // switch case
 
-        // IF
-        // if (condizione) {
-        // codice da eseguire se la condizione è vera
-        // }
+        int day = 1;
 
-        boolean isOnline = true;
-        if (isOnline) {
-            System.out.println("è online");
+        switch (day) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+                break;
         }
-
-        // IF ELSE
-        // if (condizione) {
-        // codice da eseguire se la condizione è vera
-        //
-        // } else {
-        // codice da eseguire se la condizione è falsa
-        // }
-
-        if (isOnline) {
-            System.out.println("è online");
-
-        } else {
-            System.out.println("non è online");
-        }
-
-        // IF ELSE IF
-        // if (condizione) {
-        // codice da eseguire se la condizione è vera
-        //
-        //
-        // } else if (condizione) {
-        // codice da eseguire se la condizione è falsa
-        // }
-
-        int age = 18;
-        if (age >= 18) {
-            System.out.println("può votare");
-        } else if (age >= 16) {
-            System.out.println("può votare in seconda");
-        }
-
-        // TERNARY OPERATOR
-        // (condizione) ? codice da eseguire se la condizione è vera : codice da
-        // eseguire se la condizione è falsa
-        int x = 10;
-        int y = 20;
-        int max = (x > y) ? x : y;
-        System.out.println(max);
 
     }
 }
