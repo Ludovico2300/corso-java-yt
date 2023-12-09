@@ -1,9 +1,54 @@
 public class Persona {
 
-    String nome = "Luca";
-    String cognome = "Rossi";
-    int eta = 25;
-    String colorePreferito = "Blu";
+    String nome;
+    String cognome;
+    int eta;
+    String colorePreferito;
+    // Attributi
+    // Metodi
+    // Costruttore
+    // Getter e Setter
+    // toString
+
+    public Persona(String nome, String cognome, int eta, String colorePreferito) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.eta = eta;
+        this.colorePreferito = colorePreferito;
+    }
+
+    // Getter e Setter
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public int getEta() {
+        return eta;
+    }
+
+    public void setEta(int eta) {
+        this.eta = eta;
+    }
+
+    public String getColorePreferito() {
+        return colorePreferito;
+    }
+
+    public void setColorePreferito(String colorePreferito) {
+        this.colorePreferito = colorePreferito;
+    }
 
     void saluta() {
         System.out.println("Ciao sono " + nome + " " + cognome + " e ho " + eta + " anni.");
