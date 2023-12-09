@@ -1,81 +1,44 @@
 
-import java.util.Arrays;
-
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("INIZIO ARRAY");
+        System.out.println("INIZIO METODI STRINGHE");
 
-        // array, crearne uno, associare elementi, metodo to string, lunghezza,
-        // modificare e mostrare elementi
-
-        // array
-        int[] numbers = new int[3];
-        int[] numbers2 = new int[] { 10, 20, 30 };
-
-        // associare elementi
-        numbers[0] = 1;
-        numbers[1] = 2;
-        numbers[2] = 3;
-
-        // metodo to string
-        System.out.println(numbers);
-        System.out.println(Arrays.toString(numbers));
-
-        // lunghezza
-        System.out.println(numbers.length);
-
-        // modificare e mostrare elementi
-        numbers[0] = 2;
-        System.out.println(numbers[0]);
-
-        // array e ciclo for
-        for (int i = 0; i < numbers2.length; i++) {
-            System.out.println("ciclo for " + numbers2[i]);
-        }
-
-        // array e ciclo for-each
-        for (int number : numbers2) {
-            System.out.println("ciclo for each " + number);
-        }
-
-        System.out.println("INIZIO ARRAY MULTIDIMENSIONALI");
-
-        // array multidimensionale
-        String[][] classi = new String[3][3];
-
-        // associare elementi array multidimensionale
-        classi[0][0] = "Luca";
-        classi[0][1] = "Anna";
-        classi[0][2] = "Marco";
-
-        classi[1][0] = "Lucia";
-        classi[1][1] = "Alessia";
-        classi[1][2] = "Pippo";
-
-        classi[2][0] = "Mario";
-        classi[2][1] = "Gianni";
-        classi[2][2] = "Paolo";
-
-        System.out.println(classi[2][1]);
-
-        // array 2D e ciclo foR
-        for (int classe = 0; classe < classi.length; classe++) {
-            System.out.println();
-
-            for (int alunno = 0; alunno < classi[classe].length; alunno++) {
-                System.out.print(classi[classe][alunno] + " ");
-            }
-        }
-        System.out.println();
-        // array 2D e ciclo for-each
-        for (String[] classe : classi) {
-            System.out.println();
-
-            for (String alunno : classe) {
-                System.out.print(alunno + " ");
-            }
-        }
+        // metodi stringhe
+        String nome = "Mario";
+        String cognome = "Rossi";
+        String nomeCompleto = nome + " " + cognome;
+        System.out.println(nomeCompleto);
+        System.out.println(nomeCompleto.length());
+        System.out.println(nomeCompleto.toUpperCase());
+        System.out.println(nomeCompleto.toLowerCase());
+        System.out.println(nomeCompleto.indexOf("M"));
+        System.out.println(nomeCompleto.indexOf("R"));
+        System.out.println(nomeCompleto.indexOf("R"));
+        System.out.println(nomeCompleto.equals(nomeCompleto));
+        System.out.println(nomeCompleto.equals(nomeCompleto.toUpperCase()));
+        System.out.println(nomeCompleto.equalsIgnoreCase(nomeCompleto.toUpperCase()));
+        System.out.println(nomeCompleto.lastIndexOf(" "));
+        System.out.println(nomeCompleto.substring(0, 4));
+        System.out.println(nomeCompleto.substring(5));
+        System.out.println(nomeCompleto.substring(5, 7));
+        System.out.println(nomeCompleto.replace("Mario", "Giovanni"));
+        System.out.println(nomeCompleto.replace(" ", "_"));
+        System.out.println(nomeCompleto.trim());
+        System.out.println(nomeCompleto.trim().length());
+        System.out.println(nomeCompleto.trim().toUpperCase());
+        System.out.println(nomeCompleto.trim().toLowerCase());
+        System.out.println(nomeCompleto.trim().indexOf("M"));
+        System.out.println(nomeCompleto.trim().indexOf("R"));
+        System.out.println(nomeCompleto.trim().indexOf(" "));
+        System.out.println(nomeCompleto.trim().lastIndexOf(" "));
+        System.out.println(nomeCompleto.trim().substring(0, 4));
+        System.out.println(nomeCompleto.trim().substring(5));
+        System.out.println(nomeCompleto.trim().substring(5, 7));
+        System.out.println(nomeCompleto.trim().replace("Mario", "Giovanni"));
+        System.out.println(nomeCompleto.trim().replace(" ", "_"));
+        System.out.println(nomeCompleto.trim().trim());
+        System.out.println(nomeCompleto.trim().trim().length());
 
     }
 }
