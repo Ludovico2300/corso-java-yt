@@ -1,19 +1,13 @@
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        cucinaPranzo();
         int totaleSpeso = addizione(20, 3);
+        int totaleSpeso2 = addizione(20, 3, 5);
+        double totaleSpesoDouble = addizione(22.4, 3.7);
         System.out.println(totaleSpeso);
-    }
-
-    static void cucinaPranzo() {
-        Scanner tastiera = new Scanner(System.in);
-        System.out.println("Cosa vuoi cucinare?");
-        String cibo = tastiera.nextLine();
-        System.out.println("sto cucinando " + cibo.toLowerCase());
-        tastiera.close();
+        System.out.println(totaleSpeso2);
+        System.out.println(totaleSpesoDouble);
     }
 
     static int addizione(int a, int b) {
@@ -21,4 +15,17 @@ public class Main {
         return risultato;
     }
 
+    static int addizione(int a, int b, int c) {
+        int risultato = a + b + c;
+        return risultato;
+    }
+
+    static double addizione(double a, double b) {
+        double risultato = a + b;
+        return risultato;
+    }
+
 }
+
+// overloaded methods: un metodo con stesso nome ma parametri diversi (tipi,
+// numero)
