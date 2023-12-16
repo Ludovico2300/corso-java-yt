@@ -58,4 +58,10 @@ public class Persona {
         System.out.println("Sto camminando");
     }
 
+    public String toString() {
+        String s = "Nome: " + this.nome + " Cognome: " + this.cognome + " Età: " + this.eta + " Colore Preferito: "
+                + this.colorePreferito;
+        return s;
+    }
+
 }

@@ -2,9 +2,11 @@
 public class Main {
 
     public static void main(String[] args) {
-        Pizza pizza1 = new Pizza("integrale", "pomodoro", "mozzarella", "ananas");
-        Pizza pizza2 = new Pizza("integrale", "pomodoro", "mozzarella");
+        // metodo to string
 
+        Persona persona = new Persona("Luca", "Rossi", 23, "rosso");
+        System.out.println(persona);
+        System.out.println(persona.toString());
     }
 
 }
