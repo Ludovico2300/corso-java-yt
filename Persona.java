@@ -50,8 +50,8 @@ public class Persona {
         this.colorePreferito = colorePreferito;
     }
 
-    void saluta() {
-        System.out.println("Ciao sono " + nome + " " + cognome + " e ho " + eta + " anni.");
+    void saluta(Persona personaDaSaluatare) {
+        System.out.println("Ciao " + personaDaSaluatare.nome + " io sono " + this.nome);
     }
 
     void cammina() {
