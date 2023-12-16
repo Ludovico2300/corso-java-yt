@@ -3,10 +3,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Persona persona1 = new Persona("Mario", "Rossi", 23, "rosso");
-        Persona persona2 = new Persona("Luca", "Verdi", 22, "blu");
+        // static e final, cosa sono
+        // final
 
-        persona1.saluta(persona2);
+        final int finale = 10;
+        // finale = 20; // non posso cambiare il valore di finale
+
+        // static valore uguale per tutte le istanze (vedi numeroPersone)
+
+        Persona persona1 = new Persona("Luca", "Rossi");
+        Persona persona2 = new Persona("Mario", "Bianchi");
+        Persona.mostraNumeroPersona();
 
     }
 

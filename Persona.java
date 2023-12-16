@@ -2,19 +2,13 @@ public class Persona {
 
     String nome;
     String cognome;
-    int eta;
-    String colorePreferito;
-    // Attributi
-    // Metodi
-    // Costruttore
-    // Getter e Setter
-    // toString
+    static int numeroPersona;
 
-    public Persona(String nome, String cognome, int eta, String colorePreferito) {
+    public Persona(String nome, String cognome) {
         this.nome = nome;
         this.cognome = cognome;
-        this.eta = eta;
-        this.colorePreferito = colorePreferito;
+        numeroPersona++;
+        System.out.println("collegato all'istanza:  " + numeroPersona);
     }
 
     // Getter e Setter
@@ -34,22 +28,6 @@ public class Persona {
         this.cognome = cognome;
     }
 
-    public int getEta() {
-        return eta;
-    }
-
-    public void setEta(int eta) {
-        this.eta = eta;
-    }
-
-    public String getColorePreferito() {
-        return colorePreferito;
-    }
-
-    public void setColorePreferito(String colorePreferito) {
-        this.colorePreferito = colorePreferito;
-    }
-
     void saluta(Persona personaDaSaluatare) {
         System.out.println("Ciao " + personaDaSaluatare.nome + " io sono " + this.nome);
     }
@@ -59,9 +37,12 @@ public class Persona {
     }
 
     public String toString() {
-        String s = "Nome: " + this.nome + " Cognome: " + this.cognome + " Età: " + this.eta + " Colore Preferito: "
-                + this.colorePreferito;
+        String s = "Nome: " + this.nome + " Cognome: " + this.cognome;
         return s;
+    }
+
+    static void mostraNumeroPersona() {
+        System.out.println("metodo statico: " + numeroPersona);
     }
 
 }
