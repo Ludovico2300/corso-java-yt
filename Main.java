@@ -2,11 +2,17 @@
 public class Main {
 
     public static void main(String[] args) {
-        // metodo to string
+        // array di oggetti
+        Persona[] persone = new Persona[3];
+        Persona persona1 = new Persona("Mario", "Rossi", 23, "rosso");
+        Persona persona2 = new Persona("Luca", "Verdi", 22, "blu");
+        Persona persona3 = new Persona("Giovanni", "Neri", 21, "nero");
 
-        Persona persona = new Persona("Luca", "Rossi", 23, "rosso");
-        System.out.println(persona);
-        System.out.println(persona.toString());
+        persone[0] = persona1;
+        persone[1] = persona2;
+        persone[2] = persona3;
+
+        System.out.println(persone[0].toString());
     }
 
 }
