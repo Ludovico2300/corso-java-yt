@@ -1,58 +1,25 @@
 package Pacchetto1;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class Main {
 
     public static void main(String[] args) {
-        // lavorare con file
+        // casting --> conversione di un tipo in un altro
+        // implicito
 
-        // File file2 = new File("prova.txt");
-        // if (file2.exists()) {
-        // System.out.println("Il file2 esiste");
-        // System.out.println(file2.getPath());
-        // System.out.println(file2.getAbsolutePath());
-        // System.out.println(file2.isFile());
-        // System.out.println(file2.isDirectory());
-        // System.out.println(file2.canRead());
-        // System.out.println(file2.canWrite());
-        // System.out.println(file2.length());
-        // System.out.println(file2.lastModified());
-        // System.out.println(file2.delete());
+        int a = 10;
+        double b = a;
+        System.out.println(b);
+        System.out.println(a);
+        System.out.println("----------------------");
 
-        // } else {
-        // System.out.println("Il file2 non esiste");
-        // }
+        // esplcito (quando passo da un tipo di dato ampio a uno più ristretto)
 
-        try {
-            FileWriter writer = new FileWriter("prova.txt");
-            writer.write("questo codice è scritto da codice java");
-            writer.append("\n");
-            writer.append("bellissimo file");
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        double c = 10.5;
+        int d = (int) c;
+        System.out.println(d);
+        System.out.println(c);
+        System.out.println("----------------------");
 
-        try {
-            FileReader reader = new FileReader("reader.txt");
-            int data = reader.read();
-
-            while (data != -1) {
-                System.out.print((char) data);
-                data = reader.read();
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-        }
     }
 
 }
