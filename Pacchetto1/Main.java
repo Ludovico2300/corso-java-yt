@@ -3,16 +3,18 @@ package Pacchetto1;
 public class Main {
 
     public static void main(String[] args) {
-        // interface
-        Leone leone = new Leone();
-        leone.caccia();
+        // polimorfismo
+        // un oggetto può assumere più tipi di classe
 
-        Gazzella gazzella = new Gazzella();
-        gazzella.scappa();
+        Studente studente1 = new Studente("Mario", "Rossi");
+        Studente studente2 = new Studente("Marco", "Verdi");
+        Insegnante insegnante1 = new Insegnante("Luigi", "Verdi");
 
-        Pesce pesce = new Pesce();
-        pesce.caccia();
-        pesce.scappa();
+        Persona[] classe = { studente1, studente2, insegnante1 };
+
+        for (Persona persona : classe) {
+            persona.saluta();
+        }
     }
 
 }

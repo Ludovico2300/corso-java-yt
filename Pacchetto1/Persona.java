@@ -29,6 +29,10 @@ public class Persona {
         return this.cognome = cognome;
     }
 
+    public void saluta() {
+        System.out.println("Ciao");
+    }
+
     public void copy(Persona persona) {
         this.setNome(persona.getNome());
         this.setCognome(persona.getCognome());
