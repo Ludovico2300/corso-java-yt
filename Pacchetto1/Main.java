@@ -1,31 +1,24 @@
 package Pacchetto1;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 
 public class Main {
 
     public static void main(String[] args) {
-        // data e ora
+        // hashmap
 
-        LocalDate x = LocalDate.now();
-        System.out.println(x);
-        System.out.println(x.getDayOfMonth());
-        System.out.println(x.getMonth());
-        System.out.println(x.getYear());
-        LocalTime y = LocalTime.now();
-        System.out.println(y);
-        LocalDateTime z = LocalDateTime.now();
-        System.out.println(z);
+        HashMap<String, String> capitali = new HashMap<>();
+        capitali.put("Italia", "Roma");
+        capitali.put("Francia", "Parigi");
+        capitali.put("Germania", "Berlino");
+        capitali.put("Spagna", "Madrid");
 
-        // formattare
-
-        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        String data = x.format(format);
-        System.out.println(data);
-
+        System.out.println(capitali);
+        System.out.println(capitali.get("Italia"));
+        capitali.remove("Francia");
+        System.out.println(capitali);
+        capitali.clear();
+        System.out.println(capitali);
     }
 
 }
