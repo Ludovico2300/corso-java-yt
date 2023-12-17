@@ -1,38 +1,58 @@
 package Pacchetto1;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 public class Main {
 
     public static void main(String[] args) {
-        // gestire exception con try, catch e finally
+        // lavorare con file
 
-        Scanner scanner = new Scanner(System.in);
+        // File file2 = new File("prova.txt");
+        // if (file2.exists()) {
+        // System.out.println("Il file2 esiste");
+        // System.out.println(file2.getPath());
+        // System.out.println(file2.getAbsolutePath());
+        // System.out.println(file2.isFile());
+        // System.out.println(file2.isDirectory());
+        // System.out.println(file2.canRead());
+        // System.out.println(file2.canWrite());
+        // System.out.println(file2.length());
+        // System.out.println(file2.lastModified());
+        // System.out.println(file2.delete());
+
+        // } else {
+        // System.out.println("Il file2 non esiste");
+        // }
 
         try {
-            System.out.println("Inserisci un numero: ");
-            int x = scanner.nextInt();
-
-            System.out.println("Inserisci il secondo numero: ");
-            int y = scanner.nextInt();
-
-            int result = x / y;
-            System.out.println(result);
-
-            System.out.println(x / y);
-        } catch (ArithmeticException e) {
-            System.out.println("Non puoi dividere per 0");
-        } catch (InputMismatchException e) {
-            System.out.println("Non puoi dividere un numero per una stinga");
-
-        } catch (Exception e) {
-            System.out.println("Errore generico");
-        } finally {
-            System.out.println("Ciao");
-            scanner.close();
+            FileWriter writer = new FileWriter("prova.txt");
+            writer.write("questo codice è scritto da codice java");
+            writer.append("\n");
+            writer.append("bellissimo file");
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
+        try {
+            FileReader reader = new FileReader("reader.txt");
+            int data = reader.read();
+
+            while (data != -1) {
+                System.out.print((char) data);
+                data = reader.read();
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+        }
     }
 
 }
