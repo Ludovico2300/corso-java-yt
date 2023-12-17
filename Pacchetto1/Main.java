@@ -1,20 +1,38 @@
 package Pacchetto1;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-        // polimorfismo
-        // un oggetto può assumere più tipi di classe
+        // gestire exception con try, catch e finally
 
-        Studente studente1 = new Studente("Mario", "Rossi");
-        Studente studente2 = new Studente("Marco", "Verdi");
-        Insegnante insegnante1 = new Insegnante("Luigi", "Verdi");
+        Scanner scanner = new Scanner(System.in);
 
-        Persona[] classe = { studente1, studente2, insegnante1 };
+        try {
+            System.out.println("Inserisci un numero: ");
+            int x = scanner.nextInt();
 
-        for (Persona persona : classe) {
-            persona.saluta();
+            System.out.println("Inserisci il secondo numero: ");
+            int y = scanner.nextInt();
+
+            int result = x / y;
+            System.out.println(result);
+
+            System.out.println(x / y);
+        } catch (ArithmeticException e) {
+            System.out.println("Non puoi dividere per 0");
+        } catch (InputMismatchException e) {
+            System.out.println("Non puoi dividere un numero per una stinga");
+
+        } catch (Exception e) {
+            System.out.println("Errore generico");
+        } finally {
+            System.out.println("Ciao");
+            scanner.close();
         }
+
     }
 
 }
