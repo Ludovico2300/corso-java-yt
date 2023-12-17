@@ -1,23 +1,16 @@
 package Pacchetto1;
 
-import Pacchetto2.*;
-
 public class Main {
 
     public static void main(String[] args) {
-        // modificatori di accesso (public, private, protected, default)
+        // incapsulamento
+        Persona persona1 = new Persona("Ludo", "Colucci");
 
-        /*
-         * 
-         * class package subclass world
-         * 
-         * public si si si si
-         * protected si si si no
-         * default si si no no
-         * private si no no no
-         * 
-         */
+        persona1.setNome("Luca");
+        persona1.setCognome("Bianchi");
 
+        System.out.println(persona1.getNome());
+        System.out.println(persona1.getCognome());
     }
 
 }

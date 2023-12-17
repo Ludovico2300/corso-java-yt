@@ -1,0 +1,28 @@
+package Pacchetto1;
+
+public class Persona {
+    private String nome;
+    private String cognome;
+
+    Persona(String nome, String cognome) {
+        this.nome = nome;
+        this.cognome = cognome;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public String setNome(String nome) {
+        return this.nome = nome;
+    }
+
+    public String setCognome(String cognome) {
+        return this.cognome = cognome;
+    }
+
+}
