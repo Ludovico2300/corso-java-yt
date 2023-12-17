@@ -1,24 +1,30 @@
 package Pacchetto1;
 
-import java.util.HashMap;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Main {
 
     public static void main(String[] args) {
-        // hashmap
+        // itiratori
+        ArrayList<String> persone = new ArrayList<>();
 
-        HashMap<String, String> capitali = new HashMap<>();
-        capitali.put("Italia", "Roma");
-        capitali.put("Francia", "Parigi");
-        capitali.put("Germania", "Berlino");
-        capitali.put("Spagna", "Madrid");
+        persone.add("Mario");
+        persone.add("Luigi");
+        persone.add("Peach");
+        persone.add("Toad");
 
-        System.out.println(capitali);
-        System.out.println(capitali.get("Italia"));
-        capitali.remove("Francia");
-        System.out.println(capitali);
-        capitali.clear();
-        System.out.println(capitali);
+        Iterator<String> it = persone.iterator();
+
+        while (it.hasNext()) {
+            String s = it.next();
+            if (s == "Luigi") {
+                it.remove();
+            }
+
+        }
+        System.out.println(persone);
+
     }
 
 }
