@@ -28,6 +28,10 @@ public class Persona {
         this.cognome = cognome;
     }
 
+    void saluta() {
+        System.out.println("Ciao io sono " + this.nome);
+    }
+
     void saluta(Persona personaDaSaluatare) {
         System.out.println("Ciao " + personaDaSaluatare.nome + " io sono " + this.nome);
     }

@@ -3,17 +3,23 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // static e final, cosa sono
-        // final
+        // ereditarietà
+        // classe figlia eredita tutti i metodi e attributi di classe madre
+        Persona persona1 = new Persona("Mario", "Rossi");
+        persona1.saluta();
 
-        final int finale = 10;
-        // finale = 20; // non posso cambiare il valore di finale
+        Studente studente1 = new Studente("Luigi", "Verdi");
+        studente1.saluta();
+        studente1.studia();
 
-        // static valore uguale per tutte le istanze (vedi numeroPersone)
+        Insegnante insegnante1 = new Insegnante("Gianni", "Bianchi");
+        insegnante1.insegna();
 
-        Persona persona1 = new Persona("Luca", "Rossi");
-        Persona persona2 = new Persona("Mario", "Bianchi");
-        Persona.mostraNumeroPersona();
+        // over riding
+        // sovrascrivo il metodo della classe madre
+        persona1.saluta();
+        studente1.saluta();
+        insegnante1.saluta();
 
     }
 
