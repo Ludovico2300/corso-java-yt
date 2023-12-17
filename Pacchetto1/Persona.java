@@ -9,6 +9,10 @@ public class Persona {
         this.cognome = cognome;
     }
 
+    Persona(Persona persona) {
+        this.copy(persona);
+    }
+
     public String getNome() {
         return nome;
     }
@@ -23,6 +27,11 @@ public class Persona {
 
     public String setCognome(String cognome) {
         return this.cognome = cognome;
+    }
+
+    public void copy(Persona persona) {
+        this.setNome(persona.getNome());
+        this.setCognome(persona.getCognome());
     }
 
 }
